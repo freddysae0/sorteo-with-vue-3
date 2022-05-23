@@ -5,8 +5,14 @@
     </div>
     <h1>:</h1>
     <div>
-      <h1>{{ y }}</h1>
+      <h1>
+        {{ y }}
+      </h1>
     </div>
+
+    <Transition>
+      <h3 v-if="show">{{ s }}</h3>
+    </Transition>
   </div>
 </template>
 
@@ -16,10 +22,11 @@ export default {
 
   data() {
     return {
+      show: false,
       x: this.timex,
       y: "00",
       s: "",
-
+      porgusto: "",
       bool: true,
     };
   },
@@ -44,12 +51,15 @@ export default {
           }
 
           if (j == 0 && i <= 0) {
-            i = "POOO PO POO";
-            j = "POOO PO POO";
+            this.show = true;
+            this.s = "La rifa comenzará en breve...";
+            setTimeout(() => {
+              this.$emit("terminado");
+            }, 2000);
+
             clearInterval(timeInterval);
           }
 
-          console.log(" lol ");
           this.x = i;
           this.y = j;
 
@@ -73,5 +83,15 @@ export default {
 h1 {
   color: aliceblue;
   font-size: 40vh;
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
 }
 </style>
