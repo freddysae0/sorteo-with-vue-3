@@ -47,6 +47,10 @@ export default {
       if(this.para == false){
         this.numberLoop();
       }
+      /* if(this.para == true){
+        startConfetti();
+        setTimeout(()=>{ stopConfetti()},7000 );
+      } */
     },
     numberLoop() {
       let timeInterval = setInterval(() => {

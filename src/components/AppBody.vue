@@ -12,14 +12,12 @@
 
 <script>
 import RegresiveCount from "./RegresiveCount.vue";
-import RifaOn from "./RifaOn.vue";
 import BodyCarousel from "./BodyCarousel.vue";
 export default {
   el: "#body",
   name: "Body",
   components: {
     RegresiveCount,
-    RifaOn,
     BodyCarousel,
   },
   data() {
