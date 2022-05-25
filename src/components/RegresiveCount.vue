@@ -1,13 +1,13 @@
 <template>
-  <div>
+  <div class="countBox">
     <div>
-      <h1>{{ x }}</h1>
+      <h2>{{ x }}</h2>
     </div>
-    <h1>:</h1>
+    <h2>:</h2>
     <div>
-      <h1>
+      <h2>
         {{ y }}
-      </h1>
+      </h2>
     </div>
 
     <Transition>
@@ -43,7 +43,7 @@ export default {
     time(x) {
       if (this.bool == true) {
         let i = x - 1;
-        let j = 59;
+        let j = 1;
         const timeInterval = setInterval(() => {
           if (j < 0) {
             i -= 1;
@@ -82,15 +82,24 @@ export default {
 
 <style scoped>
 h1 {
-  color: aliceblue;
-  font-size: 40vh;
+  
 }
 
 .v-enter-active,
 .v-leave-active {
   transition: opacity 0.5s ease;
 }
+.countBox{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
+h2{
+  color: aliceblue;
+  font-size: 20vh;
+  margin: 0;
+}
 .v-enter-from,
 .v-leave-to {
   opacity: 0;

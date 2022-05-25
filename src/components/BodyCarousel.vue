@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="centered">
     <h3>{{ x }}</h3>
     <button class="btn-31" @click="toTruePara">
       <span class="text-container">
@@ -65,10 +65,14 @@ export default {
 <style scoped>
 div {
   font-size: 20vh;
-  flex-direction: column;
-  align-items: center;
 }
-
+.centered{
+  padding-top: 20vh;
+  margin-bottom: 200vh;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
 
 .winers-container{
   width: 50vh;
@@ -95,8 +99,15 @@ ul{
   
 }
 
-.btn-31 {
+p{
 
+  font-size: 2vh;
+}
+.btn-31 {
+  
+
+  margin-left: 20%;
+  margin-right: 20%;
   margin-bottom: 25px;
   cursor: pointer;
   display: block;

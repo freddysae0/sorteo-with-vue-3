@@ -1,7 +1,7 @@
 <template>
   <div id="body">
     <section id="uno" class="muestra">
-      <regresive-count :timex="5" @terminado="eventStart()"></regresive-count>
+      <regresive-count :timex="1" @terminado="eventStart()"></regresive-count>
     </section>
 
     <section id="dos">
@@ -44,9 +44,9 @@ export default {
 <style scoped>
 div {
   height: 100vh;
-  display: flex;
+ /*  display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 
 h1 {
@@ -57,7 +57,7 @@ h1 {
 
 html,
 body,
-section {
+#uno {
   height: 100%;
   
   width: 100%;
@@ -68,11 +68,28 @@ section {
   color: #fff;
   font-family: Helvetica;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   height: fit-content;
 }
+
+#dos {
+  height: 100%;
+  
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: #0099cc;
+  color: #fff;
+  font-family: Helvetica;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: fit-content;
+}
+
 
 
 h1 {
