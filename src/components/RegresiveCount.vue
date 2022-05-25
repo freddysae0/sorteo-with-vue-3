@@ -42,7 +42,7 @@ export default {
     time(x) {
       if (this.bool == true) {
         let i = x - 1;
-        let j = 59;
+        let j = 2;
         const timeInterval = setInterval(() => {
           if (j < 0) {
             i -= 1;

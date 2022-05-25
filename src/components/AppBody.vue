@@ -1,11 +1,11 @@
 <template>
   <div id="body">
     <section id="uno" class="muestra">
-      <regresive-count timex="1" @terminado="eventStart()"></regresive-count>
+      <regresive-count :timex="1" @terminado="eventStart()"></regresive-count>
     </section>
 
     <section id="dos">
-      <rifa-on></rifa-on>
+      <body-carousel :min="1" :max="100"></body-carousel>
     </section>
   </div>
 </template>
@@ -13,12 +13,14 @@
 <script>
 import RegresiveCount from "./RegresiveCount.vue";
 import RifaOn from "./RifaOn.vue";
+import BodyCarousel from "./BodyCarousel.vue";
 export default {
   el: "#body",
   name: "Body",
   components: {
     RegresiveCount,
     RifaOn,
+    BodyCarousel,
   },
   data() {
     return {

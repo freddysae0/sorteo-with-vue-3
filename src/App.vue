@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Body from "./components/Body.vue";
+import Body from "./components/AppBody.vue";
 
 export default {
   components: {
