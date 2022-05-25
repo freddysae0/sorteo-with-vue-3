@@ -33,6 +33,7 @@ export default {
 
   props: {
     timex: Number,
+
   },
   mounted() {
     this.time(this.timex);
@@ -42,7 +43,7 @@ export default {
     time(x) {
       if (this.bool == true) {
         let i = x - 1;
-        let j = 2;
+        let j = 59;
         const timeInterval = setInterval(() => {
           if (j < 0) {
             i -= 1;

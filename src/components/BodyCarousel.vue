@@ -1,17 +1,19 @@
 <template>
   <div>
-    <h1>{{ x }}</h1>
+    <h3>{{ x }}</h3>
     <button class="btn-31" @click="toTruePara">
       <span class="text-container">
         <span class="text">{{ this.para ? "Comenzar" : "Parar" }}</span>
       </span>
     </button>
-    <div class="winers" style="background-color: red">
+    <div class="winers-container">
+    <div class="winers" >
       <ul>
         <li v-for="winer in winers">
           <p>{{ winer }}</p>
         </li>
       </ul>
+    </div>
     </div>
   </div>
 </template>
@@ -41,7 +43,10 @@ export default {
     },
 
     toTruePara() {
-      this.para = true;
+      this.para = !this.para;
+      if(this.para == false){
+        this.numberLoop();
+      }
     },
     numberLoop() {
       let timeInterval = setInterval(() => {
@@ -60,16 +65,39 @@ export default {
 <style scoped>
 div {
   font-size: 20vh;
-  display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-h2 {
-  font-size: 20vh;
+
+.winers-container{
+  width: 50vh;
+}
+h3 {
+  font-size: 18vh;
+  margin: 0;
+}
+
+.winers{
+  
+  font-size: medium;
+ 
+}
+
+ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  margin: 0;
+  padding: 0;
+  
 }
 
 .btn-31 {
+
+  margin-bottom: 25px;
   cursor: pointer;
   display: block;
   box-sizing: border-box;
