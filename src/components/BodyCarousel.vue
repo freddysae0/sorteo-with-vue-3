@@ -7,18 +7,21 @@
       </span>
     </button>
     <div class="winers-container">
-    <div class="winers" >
-      <ul>
-        <li v-for="winer in winers">
-          <p>{{ winer }}</p>
-        </li>
-      </ul>
-    </div>
+      <div class="winers">
+        <ul>
+          <li v-for="winer in winers">
+            <p>{{ winer }}</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+
+
+
 export default {
   data() {
     return {
@@ -27,30 +30,30 @@ export default {
       winers: [],
     };
   },
-
   props: {
     min: Number,
     max: Number,
   },
-
   mounted() {
     this.numberLoop();
   },
   methods: {
+    initConfetti() {
+      const jsConfetti = new JSConfetti()
+    jsConfetti.addConfetti()
+    },
     randNumber() {
       this.x = Math.random() * (this.max - this.min) + this.min;
       this.x = parseInt(this.x);
     },
-
     toTruePara() {
       this.para = !this.para;
-      if(this.para == false){
+      if (this.para == false) {
         this.numberLoop();
       }
-      /* if(this.para == true){
-        startConfetti();
-        setTimeout(()=>{ stopConfetti()},7000 );
-      } */
+      if (this.para == true) {
+        this.initConfetti();
+      }
     },
     numberLoop() {
       let timeInterval = setInterval(() => {
@@ -70,7 +73,7 @@ export default {
 div {
   font-size: 20vh;
 }
-.centered{
+.centered {
   padding-top: 20vh;
   margin-bottom: 200vh;
   display: flex;
@@ -78,7 +81,7 @@ div {
   align-content: center;
 }
 
-.winers-container{
+.winers-container {
   width: 50vh;
 }
 h3 {
@@ -86,30 +89,24 @@ h3 {
   margin: 0;
 }
 
-.winers{
-  
+.winers {
   font-size: medium;
- 
 }
 
-ul{
+ul {
   list-style: none;
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
   margin: 0;
   padding: 0;
-  
 }
 
-p{
-
+p {
   font-size: 2vh;
 }
 .btn-31 {
-  
-
   margin-left: 20%;
   margin-right: 20%;
   margin-bottom: 25px;
