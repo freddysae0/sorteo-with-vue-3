@@ -62,7 +62,8 @@ body,
   overflow: hidden;
   margin: 0;
   padding: 0;
-  background-color: #0099cc;
+  background-color: #A40606;
+  background-image: radial-gradient(rgb(255, 253, 253 , 0.1) , rgb(0, 0, 0 , 0.4));
   color: #fff;
   font-family: Helvetica;
   display: flex;
@@ -79,7 +80,7 @@ body,
   overflow: hidden;
   margin: 0;
   padding: 0;
-  background-color: #0099cc;
+
   color: #fff;
   font-family: Helvetica;
   display: flex;
@@ -114,12 +115,11 @@ a {
 }
 
 #dos {
-  background-color: #15b22f;
+  background-color: #3772FF;
+  
+  background-image: radial-gradient(rgb(255, 253, 253 , 0.1) , rgb(0, 0, 0 , 0.4));
 }
 
-#dos a {
-  color: #15b22f;
-}
 
 #uno.muestra,
 #dos.muestra {
