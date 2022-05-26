@@ -81,9 +81,7 @@ export default {
 </script>
 
 <style scoped>
-h1 {
-  
-}
+
 
 .v-enter-active,
 .v-leave-active {
