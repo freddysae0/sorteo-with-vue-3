@@ -36,8 +36,16 @@ export default {
   },
   mounted() {
     this.numberLoop();
+    /* this.Cooonfetti(); */
   },
   methods: {
+    Cooonfetti(){
+      setInterval(()=>{
+        this.initConfetti();
+      }, 3500);
+    },
+
+
     initConfetti() {
       const jsConfetti = new JSConfetti()
     jsConfetti.addConfetti()
