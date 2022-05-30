@@ -39,8 +39,8 @@ export default {
     /* this.Cooonfetti(); */
   },
   methods: {
-    Cooonfetti(){
-      setInterval(()=>{
+    Cooonfetti() {
+      setInterval(() => {
         this.initConfetti();
       }, 3500);
     },
@@ -48,7 +48,7 @@ export default {
 
     initConfetti() {
       const jsConfetti = new JSConfetti()
-    jsConfetti.addConfetti()
+      jsConfetti.addConfetti()
     },
     randNumber() {
       this.x = Math.random() * (this.max - this.min) + this.min;
@@ -81,20 +81,27 @@ export default {
 div {
   font-size: 20vh;
 }
+
 .centered {
-  padding-top: 20vh;
-  margin-bottom: 200vh;
+  width: 600px;
+  /* padding-top: 20vh; */
+  /* margin-bottom: 200vh; */
+  height: fit-content;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-content: center;
+  align-items: center;
+  /* justify-content: space-evenly; */
 }
 
 .winers-container {
   width: 50vh;
 }
+
 h3 {
   font-size: 18vh;
   margin: 0;
+  margin: 20vh 0 40px;
 }
 
 .winers {
@@ -114,14 +121,18 @@ ul {
 p {
   font-size: 2vh;
 }
+
 .btn-31 {
   margin-left: 20%;
   margin-right: 20%;
   margin-bottom: 25px;
   cursor: pointer;
-  display: block;
+  display: flex;
+  justify-content: center;
   box-sizing: border-box;
-  padding: 1.5rem 3.5rem;
+  /* height: 10vh;
+  width: 30vh; */
+  /* padding: 1.5rem 3.5rem; */
 
   position: relative;
 
@@ -142,29 +153,32 @@ p {
   inset: 0;
 
   background: white;
-  clip-path: polygon(
-    100% 0,
-    var(--progress) var(--progress),
-    0 100%,
-    100% 100%
-  );
+  clip-path: polygon(100% 0,
+      var(--progress) var(--progress),
+      0 100%,
+      100% 100%);
   transition: clip-path 0.2s;
 }
+
 .btn-31:hover {
   --progress: 0%;
   color: black;
 }
 
 .btn-31 .text-container {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   overflow: hidden;
+  padding: 10px;
+  width: 30vh;
 }
 
 .btn-31 .text {
-  display: block;
+  display: flex;
   position: relative;
-  font-size: 1rem;
+  font-size: 5vh;
   font-weight: 900;
   /* mix-blend-mode: difference; */
 }
@@ -178,12 +192,15 @@ p {
   from {
     transform: translateY(0%);
   }
+
   50% {
     transform: translateY(80%);
   }
+
   51% {
     transform: translateY(-80%);
   }
+
   100% {
     transform: translateY(0%);
   }

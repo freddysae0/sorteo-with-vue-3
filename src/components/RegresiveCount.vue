@@ -43,7 +43,7 @@ export default {
     time(x) {
       if (this.bool == true) {
         let i = x - 1;
-        let j = 59;
+        let j = 2;
         const timeInterval = setInterval(() => {
           if (j < 0) {
             i -= 1;
@@ -81,23 +81,23 @@ export default {
 </script>
 
 <style scoped>
-
-
 .v-enter-active,
 .v-leave-active {
   transition: opacity 0.5s ease;
 }
-.countBox{
+
+.countBox {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-h2{
+h2 {
   color: aliceblue;
   font-size: 20vh;
   margin: 0;
 }
+
 .v-enter-from,
 .v-leave-to {
   opacity: 0;
