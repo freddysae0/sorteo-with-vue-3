@@ -5,7 +5,7 @@
     </section>
 
     <section id="dos">
-      <body-carousel :min="0" :max="100000"></body-carousel>
+      <body-carousel :min="0" :max="100"></body-carousel>
     </section>
   </div>
 </template>
