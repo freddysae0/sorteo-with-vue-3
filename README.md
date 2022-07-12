@@ -1,7 +1,10 @@
 # Raffle application 
+This project contains a countdown, after it ends the draw application begins.
+![alt text](https://github.com/freddysae0/sorteo-with-vue-3/blob/master/src/assets/img/1.png)
 
-This template should help get you started developing with Vue 3 in Vite.
+![alt text](https://github.com/freddysae0/sorteo-with-vue-3/blob/master/src/assets/img/2.png)
 
+![alt text](https://github.com/freddysae0/sorteo-with-vue-3/blob/master/src/assets/img/3.png)
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
